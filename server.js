@@ -7,13 +7,13 @@ app.set('port', process.env.PORT || 5000);
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-app.get('/api-endpoint', function(request, response) {
+app.get('/balanceHistory', function(request, response) {
     var nameString = request.query.name;
     var historyString = request.query.history;
     
       var jsonContent = {
-            contact: [ {id: 22222, name: "King Lai"},{id: 33333, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"},{id: 12346, name: "King King Lai"}],
-            show: true 
+            balance: 900000,
+            history: [{type: "Top up", date: 2020-06-16, venue: "ABC Supermarket", amt: 10000}, {type: "Used", date: 2020-06-17, venue: "BBC Store", amt: 9898}}],
         };
 
     response.send(JSON.parse(JSON.stringify(jsonContent)));
