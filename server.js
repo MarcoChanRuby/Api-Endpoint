@@ -16,6 +16,7 @@ app.get('/balanceHistory', function(request, response) {
             history: [{type: "Top up", date: "2020-06-16", venue: "ABC Supermarket", amt: 10000}, {type: "Used", date: "2020-06-17", venue: "BBC Store", amt: 9898}],
         };
 
+    response.setHeader('Access-Control-Allow-Origin','*');
     response.send(JSON.parse(JSON.stringify(jsonContent)));
     
 });
