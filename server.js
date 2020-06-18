@@ -58,7 +58,7 @@ app.get('/txnHistory', function(request, response) {
 
         if (accId) {
           result = paymentData.filter(x => x.accId === parseInt(accId));
-          if(txnType && txnType !=="A"){
+          if(txnType && txnType !='A'){
             result = result.filter(x => x.txnType === txnType);
           }
         } else {
