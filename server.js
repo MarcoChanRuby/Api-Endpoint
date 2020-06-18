@@ -32,7 +32,7 @@ app.get('/balanceHistory', function(request, response) {
 
         response.setHeader('Content-Type', 'application/json');
         response.setHeader('Access-Control-Allow-Origin','*');
-        response.send(JSON.parse(JSON.stringify(jsonContent)));
+        response.send(JSON.parse(JSON.stringify(result)));
     })
 });
 
