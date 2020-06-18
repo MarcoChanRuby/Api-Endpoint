@@ -15,11 +15,25 @@ app.get('/balanceHistory', function(request, response) {
             balance: 900000,
             history: [{txnId:1, txnType: "T", date: "2020-06-16", venue: "ABC Supermarket", currency: "HKD", amt: 10000}, {txnId:2, txnType: "U", date: "2020-06-17", venue: "BBC Store", currency: "HKD", amt: 9898}],
         };
-
-    response.setHeader('Content-Type', 'application/json');
-    response.setHeader('Access-Control-Allow-Origin','*');
-    response.send(JSON.parse(JSON.stringify(jsonContent)));
     
+    fs.readFile('./data/paymentHistory.json', 'utf8', (err, data) => {
+        if (err) {
+            throw err;
+        }
+         
+        var result;
+        var paymentData = JSON.parse(data);
+
+        if (accId) {
+          result = paymentData.filter(x => x.accId === parseInt(accId));
+        } else {
+          result = paymentData;
+        }
+
+        response.setHeader('Content-Type', 'application/json');
+        response.setHeader('Access-Control-Allow-Origin','*');
+        response.send(JSON.parse(JSON.stringify(jsonContent)));
+    })
 });
 
 
