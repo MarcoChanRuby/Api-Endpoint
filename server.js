@@ -44,7 +44,7 @@ app.get('/balanceHistory', function(request, response) {
     response.send(JSON.parse(JSON.stringify(jsonContent)));
 });
 
-app.get('/getBalanceHistory', function(request, response) {
+app.get('/txnHistory', function(request, response) {
     var accId = request.query.accId;
     var txnType = request.query.txnType;
     
