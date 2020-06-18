@@ -8,14 +8,15 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/balanceHistory', function(request, response) {
-    var nameString = request.query.name;
-    var historyString = request.query.history;
+    var accId = request.query.accId;
+    var txnType = request.query.txnType;
     
       var jsonContent = {
             balance: 900000,
-            history: [{txnId:1, type: "Top up", date: "2020-06-16", venue: "ABC Supermarket", amt: 10000}, {txnId:2, type: "Used", date: "2020-06-17", venue: "BBC Store", amt: 9898}],
+            history: [{txnId:1, txnType: "T", date: "2020-06-16", venue: "ABC Supermarket", currency: "HKD", amt: 10000}, {txnId:2, txnType: "U", date: "2020-06-17", venue: "BBC Store", currency: "HKD", amt: 9898}],
         };
 
+    response.setHeader('Content-Type', 'application/json');
     response.setHeader('Access-Control-Allow-Origin','*');
     response.send(JSON.parse(JSON.stringify(jsonContent)));
     
