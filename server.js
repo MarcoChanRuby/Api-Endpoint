@@ -19,23 +19,26 @@ app.get('/balanceHistory', function(request, response) {
     
     
 
-    fs.readFile('./data/paymentHistory.json', 'utf8', (err, data) => {
-        if (err) {
-            throw err;
-        }
+    // fs.readFile('./data/paymentHistory.json', 'utf8', (err, data) => {
+    //     if (err) {
+    //         throw err;
+    //     }
          
-        var result;
-        var paymentData = JSON.parse(data);
+    //     var result;
+    //     var paymentData = JSON.parse(data);
 
-        if (accId) {
-          result = paymentData.filter(x => x.accId === accId);
-        } else {
-          result = paymentData;
-        }
+    //     if (accId) {
+    //       result = paymentData.filter(x => x.accId === accId);
+    //     } else {
+    //       result = paymentData;
+    //     }
 
-        response.setHeader('Access-Control-Allow-Origin','*');
-        response.send(JSON.parse(JSON.stringify(result)));
-    });
+    //     response.setHeader('Access-Control-Allow-Origin','*');
+    //     response.send(JSON.parse(JSON.stringify(result)));
+    // });
+
+    response.setHeader('Access-Control-Allow-Origin','*');
+    response.send(JSON.parse(JSON.stringify(jsonContent)));
 });
 
 
