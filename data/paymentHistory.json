@@ -7,13 +7,13 @@
                 "date": "2020-06-16",
                 "venue": "ABC Supermarket",
                 "currency": "HKD",
-                "amt: 10000"
+                "amt": 10000
             },{
                 "txnId":2,
                 "txnType": "U",
                 "date": "2020-06-18",
                 "venue": "EFG Store",
                 "currency": "HKD",
-                "amt": 89"
-            }],
+                "amt": 89
+            }]
 }
