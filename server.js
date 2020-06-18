@@ -32,9 +32,10 @@ app.get('/balanceHistory', function(request, response) {
         } else {
           result = paymentData;
         }
-    })
-    response.setHeader('Access-Control-Allow-Origin','*');
-    response.send(JSON.parse(JSON.stringify(result)));
+
+        response.setHeader('Access-Control-Allow-Origin','*');
+        response.send(JSON.parse(JSON.stringify(result)));
+    });
 });
 
 
