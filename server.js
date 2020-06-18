@@ -21,7 +21,7 @@ app.get('/balance', function(request, response) {
         var pData = JSON.parse(data);
 
         if (accId) {
-          result = pData.filter(x => x.accId === accId);
+          result = pData.filter(x => x.accId === parseInt(accId));
         } else {
           result = -1;
         }
