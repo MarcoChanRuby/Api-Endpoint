@@ -58,9 +58,14 @@ app.get('/txnHistory', function(request, response) {
 
         if (accId) {
           result = paymentData.filter(x => x.accId === parseInt(accId));
+          if(txnType){
+            result = result.filter(x => x.txnType === txnType);
+          }
         } else {
-          result = paymentData;
+          result = -1;
         }
+
+
 
         response.setHeader('Access-Control-Allow-Origin','*');
         response.send(JSON.parse(JSON.stringify(result)));
