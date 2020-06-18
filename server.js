@@ -8,6 +8,29 @@ app.set('port', process.env.PORT || 5000);
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
+
+app.get('/balance', function(request, response) {
+    var accId = request.query.accId;
+    
+    fs.readFile('./data/accInfo.json', 'utf8', (err, data) => {
+        if (err) {
+            throw err;
+        }
+         
+        var result;
+        var pData = JSON.parse(data);
+
+        if (accId) {
+          result = pData.filter(x => x.accId === accId);
+        } else {
+          result = -1;
+        }
+
+        response.setHeader('Access-Control-Allow-Origin','*');
+        response.send(JSON.parse(JSON.stringify(result)));
+    });
+});
+
 app.get('/balanceHistory', function(request, response) {
     var accId = request.query.accId;
     var txnType = request.query.txnType;
@@ -21,7 +44,7 @@ app.get('/balanceHistory', function(request, response) {
     response.send(JSON.parse(JSON.stringify(jsonContent)));
 });
 
-app.get('/balanceHistory/:accId', function(request, response) {
+app.get('/getBalanceHistory', function(request, response) {
     var accId = request.query.accId;
     var txnType = request.query.txnType;
     
