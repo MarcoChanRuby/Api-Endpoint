@@ -19,6 +19,8 @@ app.get('/balance', function(request, response) {
          
         var result;
         var pData = JSON.parse(data);
+        console.info(data);
+        console.info(pData);
 
         if (accId) {
           result = pData.filter(x => x.accId === parseInt(accId));
@@ -57,7 +59,7 @@ app.get('/txnHistory', function(request, response) {
         var paymentData = JSON.parse(data);
 
         if (accId) {
-          result = paymentData.filter(x => x.accId === accId);
+          result = paymentData.filter(x => x.accId === parseInt(accId));
         } else {
           result = paymentData;
         }
