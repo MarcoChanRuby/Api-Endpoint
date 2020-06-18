@@ -6,7 +6,7 @@
     "venue" : "ABC Supermarket",
     "currency" : "HKD",
     "amt": 10000
-    },{
+},{
     "accId" : 123,
     "txnId" : 2,
     "txnType" : "U",
@@ -14,4 +14,20 @@
     "venue" : "EFG Store",
     "currency" : "HKD",
     "amt" : 89
+},{
+    "accId" : 234,
+    "txnId" : 3,
+    "txnType" : "U",
+    "date" : "2020-06-19",
+    "venue" : "KK Store",
+    "currency" : "CYN",
+    "amt" : 0.5
+},{
+    "accId" : 123,
+    "txnId" : 4,
+    "txnType" : "U",
+    "date" : "2020-06-18",
+    "venue" : "M M",
+    "currency" : "HKD",
+    "amt" : 12.3
 }]

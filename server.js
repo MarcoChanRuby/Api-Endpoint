@@ -19,8 +19,6 @@ app.get('/balance', function(request, response) {
          
         var result;
         var pData = JSON.parse(data);
-        console.info(data);
-        console.info(pData);
 
         if (accId) {
           result = pData.filter(x => x.accId === parseInt(accId));

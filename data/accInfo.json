@@ -1,5 +1,16 @@
 [{
     "accId"  : 123,
     "balance": 987654,
-    "custId" : 321
+    "custId" : 321,
+    "currency": "HKD"
+},{
+    "accId"  : 234,
+    "balance": 789456,
+    "custId" : 321,
+    "currency": "HKD"
+},{
+    "accId"  : 345,
+    "balance": 963852,
+    "custId" : 321,
+    "currency": "CYN"
 }]
