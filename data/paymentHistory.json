@@ -1,7 +1,7 @@
 [{
     "accId" : 123,
     "txnId" : 1,
-    "txnType" : "T",
+    "txnType" : "Top up",
     "date" : "2020-06-16",
     "venue" : "ABC Supermarket",
     "currency" : "HKD",
@@ -9,7 +9,7 @@
 },{
     "accId" : 123,
     "txnId" : 2,
-    "txnType" : "U",
+    "txnType" : "Used",
     "date" : "2020-06-18",
     "venue" : "EFG Store",
     "currency" : "HKD",
@@ -17,7 +17,7 @@
 },{
     "accId" : 234,
     "txnId" : 3,
-    "txnType" : "U",
+    "txnType" : "Used",
     "date" : "2020-06-19",
     "venue" : "KK Store",
     "currency" : "CYN",
@@ -25,7 +25,7 @@
 },{
     "accId" : 123,
     "txnId" : 4,
-    "txnType" : "U",
+    "txnType" : "Used",
     "date" : "2020-06-18",
     "venue" : "M M",
     "currency" : "HKD",
