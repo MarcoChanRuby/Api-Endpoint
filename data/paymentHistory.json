@@ -30,4 +30,20 @@
     "venue" : "M M",
     "currency" : "HKD",
     "amt" : 12.3
+},{
+    "accId" : 345,
+    "txnId" : 5,
+    "txnType" : "Top up",
+    "date" : "2020-06-18",
+    "venue" : "AA",
+    "currency" : "HKD",
+    "amt" : 12.3
+},{
+    "accId" : 345,
+    "txnId" : 6,
+    "txnType" : "Used",
+    "date" : "2020-06-18",
+    "venue" : "BB",
+    "currency" : "HKD",
+    "amt" : 12.3
 }]
