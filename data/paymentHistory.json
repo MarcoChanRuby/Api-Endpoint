@@ -15,7 +15,7 @@
     "currency" : "HKD",
     "amt" : 89
 },{
-    "accId" : 234,
+    "accId" : 345,
     "txnId" : 3,
     "txnType" : "Used",
     "date" : "2020-06-19",
