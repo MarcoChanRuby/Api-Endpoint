@@ -46,4 +46,12 @@
     "venue" : "BB",
     "currency" : "HKD",
     "amt" : 12.3
+},{
+    "accId" : 123,
+    "txnId" : 7,
+    "txnType" : "Top up",
+    "date" : "2020-06-19",
+    "venue" : "EFG Store",
+    "currency" : "HKD",
+    "amt" : 1001
 }]
