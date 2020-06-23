@@ -31,7 +31,7 @@
     "currency" : "HKD",
     "amt" : 12.3
 },{
-    "accId" : 345,
+    "accId" : 234,
     "txnId" : 5,
     "txnType" : "Top up",
     "date" : "2020-06-18",
@@ -39,7 +39,7 @@
     "currency" : "HKD",
     "amt" : 12.3
 },{
-    "accId" : 345,
+    "accId" : 234,
     "txnId" : 6,
     "txnType" : "Used",
     "date" : "2020-06-18",
